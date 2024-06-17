@@ -62,11 +62,18 @@ function Navbar() {
           About
         </a>
         <a
-          href="#Timeline"
-          className={linkClasses('Timeline')}
-          onClick={() => handleLinkClick('Timeline')}
+          href="#Timeline_Academic"
+          className={linkClasses('Timeline_Academic')}
+          onClick={() => handleLinkClick('Timeline_Academic')}
         >
-          Timeline
+          Education
+        </a>
+        <a
+          href="#Timeline_Professional"
+          className={linkClasses('Timeline_Professional')}
+          onClick={() => handleLinkClick('Timeline_Professional')}
+        >
+          Experience
         </a>
         <a
           href="#Projects"

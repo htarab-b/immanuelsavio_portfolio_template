@@ -34,7 +34,7 @@ function Home() {
       animate = {{ x:0, opacity:1 }}
       transition = {{ duration:1, delay:0 }}
       className="lg:w-1/2">
-        <img src={HomePic} className="w-fit lg:w-9/12 lg:mt-20 lg:ml-10 lg:border-2 bg-black border-black lg:dark:border-transparent" />
+        <img src={HomePic} className="w-fit lg:w-9/12 lg:mt-20 lg:ml-10" />
       </motion.div>
     </div>
   )

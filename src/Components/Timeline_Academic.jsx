@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 function Timeline_Academic() {
   return (
-    <div className="min-h-screen bg-slate-200 dark:bg-black text-black dark:text-white text-center" id='Timeline_Academic'>
+    <div className="bg-slate-200 dark:bg-black text-black dark:text-white text-center" id='Timeline'>
         <div className="container max-w-5xl py-12 mx-auto pt-24 lg:pl-32">
             <div className="grid gap-4 mx-4 sm:grid-cols-12">
                 <motion.div
@@ -17,7 +17,7 @@ function Timeline_Academic() {
                     </div>
                 </motion.div>
                 <div className="relative col-span-12 px-10 lg:px-24 space-y-6 sm:col-span-9">
-                    <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-3 before:dark:bg-gray-300">
+                    <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-3 before:bg-gray-700 before:dark:bg-gray-300">
                         <motion.div 
                         initial={{ y:100, opacity:0 }}
                         whileInView={{ y:0, opacity:1 }}

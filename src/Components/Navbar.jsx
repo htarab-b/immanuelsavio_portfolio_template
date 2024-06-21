@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import moon_icon from '../assets/darktheme.svg'
+import sun_icon from '../assets/lighttheme.svg'
 
 function Navbar() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -38,6 +40,13 @@ function Navbar() {
     }
   };
 
+  const [dark, setDark] = React.useState(false);
+
+    const darkModeHandler = () => {
+        setDark(!dark);
+        document.body.classList.toggle("dark");
+    }
+
   const linkClasses = (page) => {
     return `border-b-2 mx-3 sm:mx-10 transition duration-200 ${
       currentPage === page ? 'text-gray-700 dark:text-gray-200 border-purple-500 text-lg font-bold' : 'border-transparent hover:text-gray-700 dark:hover:text-gray-200 hover:border-blue-500'
@@ -45,7 +54,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed min-w-full bg-gray-300 shadow dark:bg-gray-900 text-sm sm:text-lg z-50 justify-center">
+    <nav className="fixed min-w-full bg-gray-300 shadow dark:bg-gray-900 text-sm sm:text-lg z-50 justify-center flex items-center">
       <div className="container flex items-center justify-center py-3 lg:py-5 mx-auto text-gray-700 capitalize dark:text-gray-200">
         <a
           href="#Home"
@@ -62,18 +71,11 @@ function Navbar() {
           About
         </a>
         <a
-          href="#Timeline_Academic"
-          className={linkClasses('Timeline_Academic')}
-          onClick={() => handleLinkClick('Timeline_Academic')}
+          href="#Timeline"
+          className={linkClasses('Timeline')}
+          onClick={() => handleLinkClick('Timeline')}
         >
-          Education
-        </a>
-        <a
-          href="#Timeline_Professional"
-          className={linkClasses('Timeline_Professional')}
-          onClick={() => handleLinkClick('Timeline_Professional')}
-        >
-          Experience
+          Timeline
         </a>
         <a
           href="#Projects"
@@ -89,6 +91,17 @@ function Navbar() {
         >
           Contact
         </a>
+      </div>
+
+      <div className="mr-2 sm:mr-5 flex items-center justify-center">
+          <button onClick={()=> darkModeHandler()}>
+              {
+                  dark && <img src={moon_icon} alt="Dark Theme" width={30} />
+              }
+              {
+                  !dark && <img src={sun_icon} alt="Light Theme" width={30} />
+              }
+          </button>
       </div>
     </nav>
   );

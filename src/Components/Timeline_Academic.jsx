@@ -1,6 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+// Logos
+import indiana from '../assets/Indiana.png'
+import manipal from '../assets/Manipal.png'
+
 function Timeline_Academic() {
   return (
     <div className="bg-slate-200 dark:bg-black text-black dark:text-white text-center" id='Timeline'>
@@ -24,6 +28,7 @@ function Timeline_Academic() {
                         transition={{ duration:0.5, delay:0 }}
                         className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-purple-600">
                             <h3 className="text-xl lg:text-2xl text-left font-semibold tracking-wide">Indiana University Bloomington</h3>
+                            <div className="w-50"><img src={indiana} alt="" className=" justify-start h-20 object-contain" /></div>
                             <time className="text-xs text-left tracking-wide uppercase dark:text-gray-500 text-gray-400">Aug 2021 - Dec 2022</time>
                             <p className="mt-3 text-justify pl-5">Master of Science (M.S.) in Data Science <br></br> Relevant Courses: Elements of AI, Computer Vision, Advanced Database Concepts, Statistics  </p>
                         </motion.div>
@@ -33,6 +38,7 @@ function Timeline_Academic() {
                         transition={{ duration:0.5, delay:0.2 }}
                         className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-purple-600">
                             <h3 className="text-xl lg:text-2xl text-left font-semibold tracking-wide">Manipal Univeristy</h3>
+                            <div className="w-50"><img src={manipal} alt="" className=" justify-start h-20 object-contain" /></div>
                             <time className="text-xs text-left tracking-wide uppercase dark:text-gray-500 text-gray-400">Aug 2016 - May 2020</time>
                             <p className="mt-3 text-justify pl-5">Bachelor of Technology (B.Tech) in Computer Science and Engineering <br></br> Relevant courses: Deep Learning, Soft Computing, Database Systems, Data Analytics</p>
                         </motion.div>
